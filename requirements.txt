@@ -1,0 +1,1 @@
+# No external runtime dependencies are required; the implementation uses the Python standard library only.

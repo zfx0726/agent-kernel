@@ -1,0 +1,71 @@
+doc_type: task
+fields:
+  schema_version:
+    type: string
+    required: true
+  doc_type:
+    type: string
+    required: true
+    enum:
+      - task
+  task_id:
+    type: string
+    required: true
+  title:
+    type: string
+    required: true
+  status:
+    type: string
+    required: true
+    enum:
+      - proposed
+      - ready
+      - in_progress
+      - blocked
+      - review
+      - complete
+      - cancelled
+  priority:
+    type: string
+    required: true
+    enum:
+      - low
+      - medium
+      - high
+      - critical
+  owner:
+    type: string
+    required: true
+  department_slug:
+    type: string
+    required: true
+  dependencies:
+    type: list[string]
+    required: true
+  linked_output_files:
+    type: list[string]
+    required: true
+  linked_canonical_docs:
+    type: list[string]
+    required: true
+  acceptance_criteria:
+    type: list[string]
+    required: true
+  created_at:
+    type: date-time
+    required: true
+  updated_at:
+    type: date-time
+    required: true
+  target_date:
+    type: date
+    required: false
+  supersedes:
+    type: string
+    required: false
+required_headings:
+  - "## Summary"
+  - "## Implementation Notes"
+  - "## Dependency Notes"
+  - "## Validation Plan"
+  - "## Change Log"

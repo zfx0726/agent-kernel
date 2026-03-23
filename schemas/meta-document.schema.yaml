@@ -1,0 +1,29 @@
+doc_type: meta_document
+fields:
+  schema_version:
+    type: string
+    required: true
+  doc_type:
+    type: string
+    required: true
+    enum:
+      - meta_document
+  doc_id:
+    type: string
+    required: true
+  title:
+    type: string
+    required: true
+  status:
+    type: string
+    required: true
+    enum:
+      - active
+      - deprecated
+  owner:
+    type: string
+    required: true
+required_headings:
+  - "## Purpose"
+  - "## Rules"
+  - "## References"

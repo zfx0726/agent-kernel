@@ -1,0 +1,40 @@
+doc_type: handoff_note
+fields:
+  schema_version:
+    type: string
+    required: true
+  doc_type:
+    type: string
+    required: true
+    enum:
+      - handoff_note
+  handoff_id:
+    type: string
+    required: true
+  session_id:
+    type: string
+    required: true
+  created_at:
+    type: date-time
+    required: true
+  author:
+    type: string
+    required: true
+  current_task:
+    type: string
+    required: true
+  status_snapshot:
+    type: string
+    required: true
+  canonical_refs:
+    type: list[string]
+    required: true
+  open_questions:
+    type: list[string]
+    required: true
+required_headings:
+  - "## Session Summary"
+  - "## Work Completed"
+  - "## Next Recommended Actions"
+  - "## Risks / Blockers"
+  - "## Canonical References"

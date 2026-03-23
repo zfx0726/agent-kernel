@@ -1,0 +1,46 @@
+doc_type: migration_spec
+fields:
+  schema_version:
+    type: string
+    required: true
+  doc_type:
+    type: string
+    required: true
+    enum:
+      - migration_spec
+  migration_id:
+    type: string
+    required: true
+  title:
+    type: string
+    required: true
+  status:
+    type: string
+    required: true
+    enum:
+      - proposed
+      - approved
+      - applied
+      - superseded
+  target_file_types:
+    type: list[string]
+    required: true
+  introduced_in_version:
+    type: string
+    required: true
+  requires_backfill:
+    type: boolean
+    required: true
+  approved_by:
+    type: list[string]
+    required: true
+  approved_at:
+    type: date-time
+    required: false
+required_headings:
+  - "## Change Summary"
+  - "## Rationale"
+  - "## Compatibility Impact"
+  - "## Migration Steps"
+  - "## Validation Requirements"
+  - "## Rollback / Supersession"
