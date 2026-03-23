@@ -1,0 +1,43 @@
+doc_type: department_index
+fields:
+  schema_version:
+    type: string
+    required: true
+  doc_type:
+    type: string
+    required: true
+    enum:
+      - department_index
+  doc_id:
+    type: string
+    required: true
+  department_slug:
+    type: string
+    required: true
+  title:
+    type: string
+    required: true
+  owner:
+    type: string
+    required: true
+  status:
+    type: string
+    required: true
+    enum:
+      - active
+      - deprecated
+  doc_refs:
+    type: list[string]
+    required: true
+  decision_refs:
+    type: list[string]
+    required: false
+  last_reviewed:
+    type: date
+    required: true
+required_headings:
+  - "## Purpose"
+  - "## Scope"
+  - "## Documents in This Folder"
+  - "## Retrieval Notes"
+  - "## Change Policy"

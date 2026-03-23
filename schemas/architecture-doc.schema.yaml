@@ -1,0 +1,44 @@
+doc_type: architecture_doc
+fields:
+  schema_version:
+    type: string
+    required: true
+  doc_type:
+    type: string
+    required: true
+    enum:
+      - architecture_doc
+  doc_id:
+    type: string
+    required: true
+  title:
+    type: string
+    required: true
+  status:
+    type: string
+    required: true
+    enum:
+      - draft
+      - active
+      - deprecated
+  owners:
+    type: list[string]
+    required: true
+  department_slug:
+    type: string
+    required: true
+  related_decisions:
+    type: list[string]
+    required: true
+  related_tasks:
+    type: list[string]
+    required: true
+  reviewed_at:
+    type: date
+    required: true
+required_headings:
+  - "## Overview"
+  - "## Constraints"
+  - "## Proposed Structure"
+  - "## Operational Implications"
+  - "## References"

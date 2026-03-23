@@ -1,0 +1,38 @@
+doc_type: execution_plan_entry
+fields:
+  schema_version:
+    type: string
+    required: true
+  doc_type:
+    type: string
+    required: true
+    enum:
+      - execution_plan_entry
+  plan_id:
+    type: string
+    required: true
+  task_id:
+    type: string
+    required: true
+  sequence:
+    type: integer
+    required: true
+  status:
+    type: string
+    required: true
+    enum:
+      - queued
+      - active
+      - done
+      - dropped
+  depends_on_plan_ids:
+    type: list[string]
+    required: false
+  updated_at:
+    type: date-time
+    required: true
+required_headings:
+  - "## Objective"
+  - "## Preconditions"
+  - "## Exit Criteria"
+  - "## Notes"

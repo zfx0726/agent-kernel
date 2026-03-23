@@ -1,0 +1,24 @@
+doc_type: department_registry
+fields:
+  schema_version:
+    type: string
+    required: true
+  doc_type:
+    type: string
+    required: true
+    enum:
+      - department_registry
+  registry_id:
+    type: string
+    required: true
+  last_reviewed:
+    type: date
+    required: true
+  departments:
+    type: list[object]
+    required: true
+required_headings:
+  - "## Registry Purpose"
+  - "## Department Entries"
+  - "## Change Rules"
+  - "## Validation Notes"

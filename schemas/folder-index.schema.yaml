@@ -1,0 +1,30 @@
+doc_type: folder_index
+fields:
+  schema_version:
+    type: string
+    required: true
+  doc_type:
+    type: string
+    required: true
+    enum:
+      - folder_index
+  doc_id:
+    type: string
+    required: true
+  title:
+    type: string
+    required: true
+  owner:
+    type: string
+    required: true
+  status:
+    type: string
+    required: true
+    enum:
+      - active
+      - deprecated
+required_headings:
+  - "## Purpose"
+  - "## Scope"
+  - "## Retrieval Notes"
+  - "## Change Policy"
